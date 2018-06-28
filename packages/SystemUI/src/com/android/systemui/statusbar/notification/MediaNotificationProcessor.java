@@ -160,11 +160,9 @@ public class MediaNotificationProcessor {
                                 LayoutDirection.RTL, false);
                 builder.setArtworkColorizedExtras(true);
 
-                // apply inverted and less strong gradient for the slim recents artwork
+		// apply inverted and less strong gradient for the slim recents artwork
                 Bitmap alternative = mColorizer.colorize(drawable, backgroundColor, true, true);
                 builder.setOriginalLargeIcon(Icon.createWithBitmap(alternative));
-                                LayoutDirection.RTL);
-                builder.setArtworkColorizedExtras(true);
             } else {
                 colorized = ((BitmapDrawable) drawable).getBitmap();
             }
